@@ -1,0 +1,23 @@
+on: [push]
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    name: a job to test tabulate-action
+    steps:
+      - name: print out the urls
+        id: urls
+        uses: shmileee/tabulate-action@v0.0.1
+        with:
+          headers: 'NAME,URL'
+          rows: |
+            [
+              [
+                "GitHub",
+                "https://github.com"
+              ],
+              [
+                "Wikipedia",
+                "https://wikipedia.com"
+              ]
+            ]
