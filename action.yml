@@ -1,0 +1,27 @@
+name: action-tabulate
+description: Nicely display information in a table.
+author: shmileee
+inputs:
+  headers:
+    description: |
+      Comma-separated list of column names (headers), e.g. "NAME,URL".
+    default: ""
+    required: true
+  rows:
+    description: |
+      List of lists in JSON format that specifies rows in accordance with columns (headers), e.g.
+      [
+        [
+          "GitHub",
+          "https://github.com"
+        ],
+        [
+          "Wikipedia",
+          "https://wikipedia.com"
+        ]
+      ]
+    default: ""
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
